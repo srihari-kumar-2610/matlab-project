@@ -8,7 +8,7 @@
         <!-- My CSS -->
         <link rel="stylesheet" href="style2.css"> 
         <!-- this is the same stylesheet used for the intro page -->
-        <script src="newlog.js"></script>
+        <!-- <script src="newlog.js"></script> -->
     
         <title>iTraceBall</title>
     </head>
@@ -20,14 +20,35 @@
                 <!-- <button type="button">Start New Log</button> -->
             </a>
             <a href="#">
-                <button type="button">Print Log</button>
+                <button id="calibrate">Caliberate Data</button>
             </a>
             <a href="rawdata.html">
-                <!-- <button type="button">View Raw Data</button> -->
+                <button type="button">Record Data</button>
             </a>
             <a href="motionvisuals.html">
                 <!-- <button type="button">Motion Visuals</button> -->
             </a>
         </div>
     </body>
+    <script>
+        // This function will execute when the page loads
+window.onload = function() {
+    alert("Your data has started recording successfully");
+};
+
+// Get a reference to the Calibrate button
+var button = document.getElementById('calibrate');
+
+// Check if the button is found
+if (button) {
+    // Add a click event listener to the button
+    button.addEventListener('click', function() {
+        // Display an alert when the button is clicked
+        alert('Your data is being calibrated');
+    });
+} else {
+    console.error('Button with id "calibrate" not found');
+}
+
+    </script>
 </html>
