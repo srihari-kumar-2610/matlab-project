@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <!-- Boxicons -->
+        <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+        <!-- My CSS -->
+        <link rel="stylesheet" href="analysedata.css">
+        <title>
+            Analyze Data page
+        </title>
+    </head>
+    <body>
+      <body>
+        <nav class="navbar">
+          <div class="navbar-logo">
+            <img src="cricket ball upper.png" alt="Logo">
+          </div>
+          <div class="navbar-home">
+              <a href="index.html">
+                  <i class='bx bx-home'></i> <!-- Home icon from Boxicons -->
+              </a>
+          </div>
+        </nav>
+        <div class="heading">
+          <h2>ANALYZE DATA</h2>
+      </div>
+        <div class="container">
+
+          <label for="textbox1">Textbox 1:</label>
+          <input type="text" id="textbox1" oninput="restrictInput(this)">
+          <br><br>
+          
+          <label for="textbox2">Textbox 2:</label>
+          <input type="text" id="textbox2" oninput="restrictInput(this)">
+          <br><br>
+          
+          <label for="textbox3">Textbox 3:</label>
+          <input type="text" id="textbox3" oninput="restrictInput(this)">
+          <br><br>
+          
+          <label for="textbox4">Textbox 4:</label>
+          <input type="text" id="textbox4" oninput="restrictInput(this)">
+          <br><br>
+        </div>
+        <button onclick="printValues()">Print Values</button>
+    <script src="analysedata.js"></script>
+    </body>
+</html>
