@@ -1,46 +1,42 @@
-// function printValues() {
-//   let values = [];
-
-//   // Retrieve values of all textboxes and restrict them to be between 0 and 1
-//   for (let i = 1; i <= 4; i++) {
-//       let value = parseFloat(document.getElementById('textbox' + i).value);
-//       values.push(restrictValue(value));
-//   }
-
-//   // Print values in console
-//   values.forEach((value, index) => {
-//       console.log("Textbox " + (index + 1) + ":", value);
-//   });
-// }
-
-// function restrictValue(value) {
-//   // Ensure the value is within the range [0, 1]
-//   if (value < 0) {
-//       window.alert("The element must be greater than 0");
-//   } else if (value > 1) {
-//       return 1;
-//   } else if (isNaN(value)) {
-//       return 0; // Treat non-numeric input as 0
-//   }
-//   return value;
-// }
 function printValues() {
   let values = [];
 
   // Retrieve values of all textboxes and restrict them to be between 0 and 1
-  for (let i = 1; i <= 4; i++) {
-      let value = parseFloat(document.getElementById('textbox' + i).value);
-      if (!isValidValue(value)) {
-          alert("Please enter a value between 0 and 1 for Textbox " + i);
-          return;
-      }
-      values.push(value);
+  for (let i = 1; i <= 5; i++) {
+    let textbox = document.getElementById('textbox' + i);
+    if (!textbox) {
+      console.error("Textbox " + i + " not found.");
+      continue; // Skip to the next iteration if the textbox is not found
+    }
+
+    let value = parseFloat(textbox.value);
+    if (!isValidValue(value)) {
+      alert("Please enter a value between 0 and 1 for Textbox " + i);
+      return;
+    }
+    values.push(value);
   }
 
   // Print values in console
   values.forEach((value, index) => {
-      console.log("Textbox " + (index + 1) + ":", value);
+    console.log("Textbox " + (index + 1) + ":", value);
   });
+
+  // Retrieve selected radio button values
+  for (let i = 1; i <= 5; i++) {
+    let radios = document.getElementsByName('options' + i);
+    let selectedValue = null;
+    radios.forEach(radio => {
+      if (radio.checked) {
+        selectedValue = radio.value;
+      }
+    });
+    if (selectedValue !== null) {
+      console.log("Radio button group " + i + " selected value:", selectedValue);
+    } else {
+      console.log("No radio button selected for group " + i);
+    }
+  }
 }
 
 function isValidValue(value) {

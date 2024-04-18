@@ -51,9 +51,10 @@ body {
 	font-weight: bold;
 	max-width: 80vw; /* Limit button width based on screen size */
 	max-height: 10vh; /* Limit button height based on screen size */
-    margin-left: 43.5vw;
-    margin-top: 10vh;
+    margin-left: -3vw;
+    margin-top: 5vh;
   }
+  
   .navbar {
 	background-color: var(--light);
 	display: flex;
@@ -61,6 +62,16 @@ body {
 	align-items: center;
 	padding: 10px 20px; /* Adjust padding as needed */
   }
+  /* .button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+margin-top: 20px; */
   .container {
     text-align: center;
     margin-top: 150px;
@@ -70,7 +81,10 @@ body {
     display: block;
     margin-bottom: 50px;
 }
-
+.radiobutton{
+    display: inline-block;
+    margin-left: 10px;
+}
 .textbox {
     width: 200px;
     padding: 5px;
@@ -80,7 +94,9 @@ body {
     box-sizing: border-box;
     /* margin-top: 250px; */
 }
-
+.textbox-container{
+    margin-bottom: 20px;
+}
   .navbar-logo,
   .navbar-home {
 	font-size: 48px;
