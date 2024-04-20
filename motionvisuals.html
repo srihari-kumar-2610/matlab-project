@@ -29,16 +29,24 @@
             <h2>VISUALISING DATA</h2>
         </div>
     </section>
-    <div class="visualdata">
-        <img id="myImage" src="vd1.jpeg" alt="visualdata">
-    </div>
+    <div class="carousel">
+        <div class="carousel-container">
+          <img src="vd1.jpeg" id="myImage" class="carousel-image" alt="Image 1">
+          <img src="vd2.jpeg" id="myImage" class="carousel-image" alt="Image 2">
+          <img src="vd3.jpeg" id="myImage" class="carousel-image" alt="Image 3">
+          <img src="vd4.jpeg" id="myImage" class="carousel-image" alt="Image 4">
+          <img src="vd5.jpeg" id="myImage" class="carousel-image" alt="Image 5">
+          <img src="vd6.jpeg" id="myImage" class="carousel-image" alt="Image 6">
+          <img src="vd7.jpeg" id="myImage" class="carousel-image" alt="Image 7">
+        </div>
+        <button class="prev" id="myImage" onclick="prevImage()">&#10094;</button>
+        <button class="next" id="myImage" onclick="nextImage()">&#10095;</button>
+      </div>
         <div class="button-container">
             <button onclick="clearImage()" type="button">Clear Data</button>
         </div>
-        <script>
-            function clearImage() {
-                document.getElementById('myImage').src = '';
-            }
+        <script src="motionvisuals.js">
+            
         </script>
     </body>
 </html>

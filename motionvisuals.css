@@ -31,13 +31,13 @@ body {
 
 .button-container {
 	position: absolute;
-	bottom: -230;
+	bottom: -290;
 	left: 50%;
 	transform: translateX(-50%);
 	width: 100%;
 	display: flex;
 	justify-content: center;
-  }
+}
   
   button {
 	padding: 2vh 4vw; /* Adjust padding based on screen size */
@@ -50,7 +50,7 @@ body {
 	font-style: italic;
 	font-weight: bold;
 	max-width: 80vw; /* Limit button width based on screen size */
-	max-height: 10vh; /* Limit button height based on screen size */
+	max-height: 13vh; /* Limit button height based on screen size */
   }
 
 .yellow-box1 {
@@ -116,7 +116,7 @@ body {
 	font-family: var(--inter);
 }
 .visualdata{
-  margin-left: 350px;
+  margin-left: 7.5vw;
 }
 @media (max-width: 768px) {
     img {
@@ -128,4 +128,40 @@ body {
     img {
         width: 90%; /* Adjust the image width for even smaller screens */
     }
+}
+.carousel {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.carousel-container {
+  display: flex;
+  overflow: hidden;
+}
+
+.carousel-image {
+  width: 150%;
+  display: none;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
 }
