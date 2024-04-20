@@ -33,31 +33,41 @@
             <div class="yellow-box1">
                 Average Velocity
                 <div class="inside-yellow-box-1">
-                    1.4573 m/s
+                    <span id="velocityValue">1.4573 </span> m/s
                 </div>
             </div>
             <div class="yellow-box2">
                 Revolutions
                 <div class="inside-yellow-box-2">
-                    2.983 rps
+                    <span id="revolutionsValue">2.983 </span>rps
                 </div>
             </div>
             <div class="yellow-box3">
                 Total Time
                 <div class="inside-yellow-box-3">
-                    22.91 sec
+                    <span id="timeValue">22.91 </span>sec
                 </div>
             </div>
             <div class="yellow-box4">
                 Distance
                 <div class="inside-yellow-box-4">
-                    22 Yards
+                    <span id="distanceValue">22 </span>Yards
                 </div>
             </div>
         </div>
         <div class="button-container">
-            <button type="button">Clear Data</button>
+            <button type="button" onclick="clearData()">Clear Data</button>
         </div>
+        <script>
+            function clearData() {
+                // Clear the values displayed on the webpage
+                document.getElementById("velocityValue").innerText = "";
+                document.getElementById("revolutionsValue").innerText = "";
+                document.getElementById("timeValue").innerText = "";
+                document.getElementById("distanceValue").innerText = "";
+            }
+            
+        </script>
     </body>
 </html>
   
