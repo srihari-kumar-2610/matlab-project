@@ -142,6 +142,7 @@ body {
 
 .carousel-image {
   width: 150%;
+  /* height: 100%; */
   display: none;
 }
 
@@ -159,9 +160,9 @@ body {
 }
 
 .prev {
-  left: 0;
+  left: -50;
 }
 
 .next {
-  right: 0;
+  right: -50;
 }
